@@ -1,0 +1,35 @@
+{
+  "dataset": "synthetic_umkm_data.csv",
+  "input_rows": 150000,
+  "output_rows": 150000,
+  "read_seconds": 0.4421,
+  "transform_seconds": 0.1287,
+  "parquet_write_seconds": 0.6831,
+  "checks": {
+    "minimum_100k_rows": true,
+    "unique_umkm_id": true,
+    "no_missing_required": true,
+    "monthly_revenue_positive": true,
+    "transaction_count_positive": true,
+    "profit_margin_valid": true,
+    "rating_in_1_to_5": true,
+    "repeat_order_in_0_to_100": true,
+    "digital_adoption_in_0_to_10": true,
+    "positive_burn_rate": true,
+    "valid_latency_category": true,
+    "valid_business_class": true,
+    "derived_profit_formula": true
+  },
+  "all_checks_passed": true,
+  "parquet_readback_rows_match": true,
+  "insights": {
+    "rows": 150000,
+    "loss_making_share_pct": 44.4,
+    "high_operational_risk_share_pct": 38.93,
+    "top_average_revenue_class": "Elite",
+    "top_average_margin_class": "Elite",
+    "repeat_order_low_adoption_pct": 16.82,
+    "repeat_order_advanced_adoption_pct": 30.03,
+    "digital_adoption_repeat_order_correlation": 0.405
+  }
+}
